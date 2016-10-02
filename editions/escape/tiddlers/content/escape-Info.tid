@@ -1,0 +1,13 @@
+created: 20161002110858283
+creator: Tobias Beer
+modified: 20161002110859753
+modifier: Tobias Beer
+title: escape-Info
+type: text/vnd.tiddlywiki
+
+The plugin $:/plugins/tobibeer/escape provides:
+
+; escape[]
+: a filter to escape characters in a title to make it safe for use in regular expressions
+
+<<plugin-docs-cp escape>>

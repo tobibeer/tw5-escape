@@ -1,0 +1,14 @@
+created: 20161002110908264
+creator: Tobias Beer
+modified: 20161002114108204
+modifier: Tobias Beer
+title: escape-Syntax
+type: text/vnd.tiddlywiki
+
+Escaping input titles is straight forward:
+
+`[[any string]escape[]]`
+
+or
+
+`[tag[foo]] +[escape[]]`

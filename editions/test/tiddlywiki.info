@@ -1,0 +1,14 @@
+{
+	"description": "tobibeer/escape tests",
+	"plugins": [
+		"tiddlywiki/jasmine",
+		"tobibeer/escape"
+	],
+	"themes": [
+		"tiddlywiki/vanilla"
+	],
+	"build": {
+		"index": [
+			"--rendertiddler","$:/core/save/all","test.html","text/plain"]
+	}
+}

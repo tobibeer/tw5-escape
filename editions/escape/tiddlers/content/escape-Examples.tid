@@ -1,0 +1,44 @@
+created: 20161002110852265
+creator: Tobias Beer
+modified: 20161002112430843
+modifier: Tobias Beer
+title: escape-Examples
+type: text/vnd.tiddlywiki
+
+\define regex() (\n|\r)title:( |\t)*$(escaped)$( |\t)*(\n|\r)
+
+The below example shows how to search for an escaped string pattern via regexp, e.g. `$:/core/modules/filters/regexp.js`, used for a poor man's matching for the title field of any system or shadow tiddler.
+
+```
+\define regex() (\n|\r)title:( |\t)*$(escaped)$( |\t)*(\n|\r)
+
+<$set name="escaped"
+filter="[[$:/core/modules/filters/regexp.js]escape[]]">
+
+{{{ [all[system+shadows]regexp:text<regex>] }}}
+</$set>
+```
+
+<<<
+<$set name="escaped"
+filter="[[$:/core/modules/filters/regexp.js]escape[]]">
+
+{{{ [all[system+shadows]regexp:text<regex>] }}}
+</$set>
+<<<
+
+In the above...
+
+# the macro regex defines the pattern used with the <<tw "regexp Operator">> below
+# the set widget evaluates a filter to a variable while escaping the defined title
+# the list then finds any system or shadow tiddler matching the defined regexp
+
+The regexp `(\n|\r)title:( |\t)*$(escaped)$( |\t)*(\n|\r)` [[translates to|https://regexper.com/#(%5Cn%7C%5Cr)title%3A(%20%7C%5Ct)*%24(escaped)%24(%20%7C%5Ct)*(%5Cn%7C%5Cr)]]:
+
+# a newline or carriage return
+# the word `title`
+# a colon `:`
+# 0 or more blanks or tabs
+# the escaped version of `$:/core/modules/filters/regexp.js`
+# 0 or more blanks or tabs
+# a newline or carriage return 

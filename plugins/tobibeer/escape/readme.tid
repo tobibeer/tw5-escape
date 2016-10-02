@@ -1,0 +1,12 @@
+title: $:/plugins/tobibeer/escape/readme
+
+The plugin $:/plugins/tobibeer/escape provides:
+
+; escape[]
+: a filter to escape characters in a title to make it safe for use in regular expressions
+: `[[any title]escape[]]` or `[tag[foo]] +[escape[]]`
+
+<br>
+
+; documentation / examples / demos...
+: http://tobibeer.github.io/tw5-plugins#escape
